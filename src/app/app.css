@@ -1,0 +1,26 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    
+}
+.layout {
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    gap: 10px;
+    
+}
+.side {
+    width: 100%;
+    
+}
+.center {
+    width: 100%;
+    
+}
+.minheight {
+    min-height: 700px;
+}
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
