@@ -11,6 +11,7 @@ import { Info } from './components/info/info';
 import { Navbar } from './components/navbar/navbar';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { Comdisney } from './components/comdisney/comdisney';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     Home,
     Info,
     Navbar,
+    Comdisney,
   ],
   imports: [
     BrowserModule,

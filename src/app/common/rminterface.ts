@@ -1,7 +1,7 @@
 //import { Info } from '../components/info/info';
 export interface InfoApiRM {
-    info: Info
-    results: CharacterRM[]
+  info: Info
+  results: CharacterRM[]
 }
 export interface Info {
   count: number
