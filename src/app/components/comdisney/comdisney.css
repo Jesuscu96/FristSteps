@@ -71,9 +71,28 @@
     font-size: smaller;
 }
 button {
-    background-color: rgba(255, 0, 0, 0.23);
-    border: solid 0px;
+    background-color: #0b0b0bd1;
+    color: #ec3535;
     border-radius: 8px; 
     margin: 2px;
-    border: solid 2px rgb(41, 77, 41);
+    border: solid 2px #ec3535;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+button:hover {
+    background-color: #ec3535;
+    color: #0b0b0bd1;
+    border: solid 2px #0b0b0bd1;
+    transform: scale(1.05);
+
+}
+.pagination {
+    
+    text-align: center;
+    
+    margin: 10px;
+}
+input:focus {
+    background-color: lightyellow;
 }

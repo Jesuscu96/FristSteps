@@ -1,24 +1,10 @@
 <div class="content" *ngIf="dataApi">
   <div id="header">
     <h1>Disney Character List</h1>
-    <div class="pagination">
-      <button (click)="prevPage()" [disabled]="currentPage === 1">
-        PrevPage
-      </button>
-      <span>Page: {{currentPage}} / {{totalPages}}</span>
-      <button (click)="nextPage()" [disabled]="currentPage=== totalPages">
-        NextPage
-      </button>
-      <br />
-      Go to: <input type="number" [(ngModel)]="pageToGo" /><button
-        (click)="goToPage(pageToGo)"
-      >
-        Go to
-      </button>
-    </div>
+
     Character name: <input type="text" [(ngModel)]="charName" />
     <button (click)="filterByName()">Filter by name</button>
-    <br>
+    <br />
     <button (click)="resetFilter()">Reset Filter</button>
     <button (click)="orderByName()">Order by Name</button>
   </div>
@@ -29,8 +15,8 @@
       <h3>{{char.name}}.</h3>
     </div>
     <img [src]="char.imageUrl" [title]="char.name" />
-    <button (click)="toggleAccordion(i)">All info </button>
-    <div *ngIf="activeIndex === i" class="accordion-content">
+    <button (click)="toggleAccordion(i)">All info</button>
+    <div *ngIf="activeIndex === i && char.films.length > 0" class="accordion-content">
       <h5>Films:</h5>
       <ul>
         <li *ngFor="let films of char.films">
@@ -39,7 +25,7 @@
       </ul>
     </div>
     <br />
-    <div *ngIf="activeIndex === i" class="accordion-content">
+    <div *ngIf="activeIndex === i && char.shortFilms.length > 0 " class="accordion-content">
       <h5>Short Films:</h5>
       <ul>
         <li *ngFor="let short of char.shortFilms">
@@ -48,7 +34,7 @@
       </ul>
     </div>
     <br />
-    <div *ngIf="activeIndex === i" class="accordion-content">
+    <div *ngIf="activeIndex === i && char.tvShows.length > 0" class="accordion-content">
       <h5>Tv Shows:</h5>
       <ul>
         <li *ngFor="let shows of char.tvShows">
@@ -58,7 +44,7 @@
     </div>
     <br />
 
-    <div *ngIf="activeIndex === i" class="accordion-content">
+    <div *ngIf="activeIndex === i && char.videoGames.length > 0" class="accordion-content">
       <h5>Video Games:</h5>
       <ul>
         <li *ngFor="let games of char.videoGames">
@@ -68,7 +54,7 @@
     </div>
     <br />
 
-    <div *ngIf="activeIndex === i" class="accordion-content">
+    <div *ngIf="activeIndex === i && char.parkAttractions.length > 0" class="accordion-content">
       <h5>Park Attractions:</h5>
       <ul>
         <li *ngFor="let park of char.parkAttractions">
@@ -76,5 +62,18 @@
         </li>
       </ul>
     </div>
+    <button (click)="toggleAccordion(i)" *ngIf="activeIndex === i" class="accordion-content">Close</button>
+    
   </div>
+</div>
+<div class="pagination">
+  <button (click)="prevPage()" [disabled]="currentPage === 1">PrevPage</button>
+  <span>Page: {{currentPage}} / {{totalPages}}</span>
+  <button (click)="nextPage()" [disabled]="currentPage=== totalPages">
+    NextPage
+  </button>
+  <br />
+  Go to: <input type="number" [(ngModel)]="pageToGo" /><button (click)="goToPage(pageToGo)">
+    Go to
+  </button>
 </div>

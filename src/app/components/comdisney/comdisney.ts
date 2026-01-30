@@ -16,7 +16,7 @@ export class Comdisney {
   currentPage: number = 1;
   totalPages: number = 0;
   pageToGo: number = 1;
-  name:string = "Mickey";
+  name:string = "";
   pageSize:number=20;
 
   constructor(private dssservice: Disney) {}
