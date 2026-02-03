@@ -1,0 +1,166 @@
+/* ====== CONTENEDOR GENERAL ====== */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background: radial-gradient(circle at top, #1f232c, #0f1923);
+    padding: 20px;
+}
+
+/* ====== HEADER ====== */
+#header {
+    width: 100%;
+    text-align: center;
+    color: #ece8e1;
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 0 0 12px rgba(255, 70, 85, 0.6);
+}
+
+/* ====== CARD ====== */
+.card {
+    width: 100%;
+    border: 1px solid rgba(255, 70, 85, 0.35);
+    border-radius: 10px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1f232c, #0f1923);
+    box-shadow: 0 0 18px rgba(255, 70, 85, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    padding: 12px;
+    box-sizing: border-box;
+    color: #ece8e1;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(255, 70, 85, 0.6);
+}
+
+/* ====== CARD HEADER ====== */
+.card-header {
+    background: linear-gradient(90deg, #ff4655, #b02a37);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-header > h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #0f1923;
+    text-transform: uppercase;
+}
+
+/* ====== IMAGEN ====== */
+.card > img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+}
+
+/* ====== CARD BODY ====== */
+.card-body {
+    padding: 14px;
+    color: #c7c7c7;
+    font-family: 'Arial', sans-serif;
+}
+
+.card-body > p {
+    margin: 6px 0;
+    font-size: 0.95rem;
+}
+
+/* ====== ACORDEÓN ====== */
+.accordion-content {
+    padding: 10px;
+    border-left: 3px solid #ff4655;
+    background: rgba(15, 25, 35, 0.9);
+    margin-top: 6px;
+    animation: fadeIn 0.25s ease-in-out;
+    color: #ece8e1;
+}
+
+.accordion-content li {
+    list-style: none;
+    margin-left: -30px;
+    font-size: 0.85rem;
+}
+
+/* ====== BOTONES ====== */
+button {
+    background: #ff4655;
+    color: #0f1923;
+    border-radius: 6px;
+    margin: 4px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 12px rgba(255, 70, 85, 0.6);
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    background: #ece8e1;
+    color: #ff4655;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* ====== PAGINACIÓN ====== */
+.pagination {
+    text-align: center;
+    margin: 15px;
+}
+
+/* ====== INPUT ====== */
+input {
+    background-color: #1f232c;
+    color: #ece8e1;
+    border: 1px solid #ff4655;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+input:focus {
+    outline: none;
+    background-color: #0f1923;
+    box-shadow: 0 0 10px rgba(255, 70, 85, 0.8);
+}
+
+/* ====== LOADER (VALORANT STYLE) ====== */
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 4px solid rgba(255, 70, 85, 0.3);
+    border-top: 4px solid #ff4655;
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+    margin: 20px auto;
+}
+
+/* ====== ANIMACIONES ====== */
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

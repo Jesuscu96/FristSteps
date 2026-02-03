@@ -6,7 +6,7 @@ import { VLinterface } from '../common/vlinterface';
   providedIn: 'root',
 })
 export class SerValorant {
-  private URI: string = 'https://rickandmortyapi.com/api/character/';
+  private URI: string = 'https://valorant-api.com/v1/agents';
 
   constructor(private http: HttpClient) {}
 

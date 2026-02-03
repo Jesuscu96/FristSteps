@@ -1,1 +1,44 @@
-<p>com-valorant works!</p>
+<div class="content" *ngIf="dataApi; else elseBlock">
+  <div id="header">
+    <h1>Rick & Morty Character List</h1>
+    <!-- <div class="pagination">
+        <button (click)="prevPage()" [disabled]="currentPage === 1">PrevPage</button>
+        <span>page{{currentPage}} / {{totalPages}}</span>
+        <button (click)="nextPage()" [disabled]="currentPage=== totalPages">NextPage</button> <br>
+        Go to: <input type="number" [(ngModel)]="pageToGo"><button (click)="goToPage(pageToGo)">Go to</button>
+
+    </div> -->
+    Character name: <input type="text" [(ngModel)]="charName"  (ngModelChange)="charName.length === 0 ? resetFilter() : filterByName()"/>
+    <!-- <button (click)="filterByName()">Filter by Name</button> -->
+    <button (click)="resetFilter()">Reset Order</button>
+    <button (click)="orderByRole()">Order by Role</button>
+  </div>
+
+  <!-- <p>Name of the first charater: {{dataApi.results[0].name}}.</p> -->
+  <div class="card" *ngFor="let char of characters; index as i">
+    <div class="card-header">
+      <h3>{{char.displayName}}.</h3>
+    </div>
+    <img [src]="char.displayIconSmall" [title]="char.displayName" />
+    <p><b>Developer Name:</b>{{char.developerName}}</p>
+    <p><b>Release Date:</b>{{char.releaseDate}}</p>
+    <p><b>Role:</b>{{char.role.displayName}}</p>
+
+    <button (click)="toggleAccordion(i)">Abilities</button>
+
+    <div *ngIf="activeIndex === i" class="accordion-content">
+      <ul>
+        <li *ngFor="let ability of char.abilities">
+          <p><b>Slot:</b> {{ability.slot}}<p>
+          <p><b>Name:</b> {{ability.displayName}}<p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<ng-template #elseBlock>
+    <div class="content">
+
+        <span class="loader"></span>
+    </div>
+</ng-template>
