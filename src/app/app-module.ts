@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Comdisney } from './components/comdisney/comdisney';
 import { ComFinalSpace } from './components/com-final-space/com-final-space';
+import { ComValorant } from './components/com-valorant/com-valorant';
 
 
 
@@ -27,6 +28,7 @@ import { ComFinalSpace } from './components/com-final-space/com-final-space';
     Navbar,
     Comdisney,
     ComFinalSpace,
+    ComValorant,
   ],
   imports: [
     BrowserModule,
