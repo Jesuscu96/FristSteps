@@ -4,6 +4,7 @@ import { Home } from './components/home/home';
 import { Info } from './components/info/info';
 import { Error } from './components/error/error';
 import { Comdisney } from './components/comdisney/comdisney';
+import { ComFinalSpace } from './components/com-final-space/com-final-space'; 
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   },{
     path: 'comdisney',
     component: Comdisney
+  },
+  {
+    path: 'comfinalspace',
+    component: ComFinalSpace
   },
   {
     path: '',

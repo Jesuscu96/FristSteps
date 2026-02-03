@@ -12,7 +12,8 @@ import { Navbar } from './components/navbar/navbar';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Comdisney } from './components/comdisney/comdisney';
-import { FinalSpace } from './components/final-space/final-space';
+import { ComFinalSpace } from './components/com-final-space/com-final-space';
+
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { FinalSpace } from './components/final-space/final-space';
     Info,
     Navbar,
     Comdisney,
-    FinalSpace,
+    ComFinalSpace,
   ],
   imports: [
     BrowserModule,

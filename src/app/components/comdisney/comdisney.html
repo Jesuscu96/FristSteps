@@ -1,4 +1,4 @@
-<div class="content" *ngIf="dataApi">
+<div class="content" *ngIf="dataApi; else elseBlock">
   <div id="header">
     <h1>Disney Character List</h1>
 
@@ -77,3 +77,10 @@
     Go to
   </button>
 </div>
+<ng-template #elseBlock>
+    <div class="content">
+
+        <span class="loader"></span>
+    </div>
+</ng-template>
+

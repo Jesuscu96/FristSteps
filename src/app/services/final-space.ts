@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import [CharacterFs] from ''
+import { CharactersFS } from '../common/fsinterface';
+
 
 @Injectable({
   providedIn: 'root',
@@ -11,8 +12,8 @@ export class FinalSpace {
 
   constructor(private http: HttpClient) {}
 
-  getCharacters(page: number = 1): Observable<InfoApiFS> {
-    return this.http.get<InfoApiFS>(`${this.URI}`);
+  getCharacters(page: number = 1): Observable<CharactersFS[]> {
+    return this.http.get<CharactersFS[]>(`${this.URI}`);
     
   }
 }
