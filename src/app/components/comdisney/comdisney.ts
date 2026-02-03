@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Disney } from '../../services/disney';
 import { CharacterDS, Dsinterface } from '../../common/dsinterface';
 
@@ -8,7 +8,7 @@ import { CharacterDS, Dsinterface } from '../../common/dsinterface';
   templateUrl: './comdisney.html',
   styleUrl: './comdisney.css',
 })
-export class Comdisney {
+export class Comdisney implements OnInit{
   dataApi!: Dsinterface;
   characters: CharacterDS[] = [];
   activeIndex: number | null = null;
@@ -43,21 +43,7 @@ export class Comdisney {
   toggleAccordion(index: number) {
     this.activeIndex = this.activeIndex === index ? null : index;
   }
-  // toggleAccordionFilms(index: number) {
-  //   this.activeIndex = this.activeIndex === index ? null : index;
-  // }
-  // toggleAccordionShort(index: number) {
-  //   this.activeIndex = this.activeIndex === index ? null : index;
-  // }
-  // toggleAccordionShows(index: number) {
-  //   this.activeIndex = this.activeIndex === index ? null : index;
-  // }
-  // toggleAccordionGames(index: number) {
-  //   this.activeIndex = this.activeIndex === index ? null : index;
-  // }
-  // toggleAccordionPark(index: number) {
-  //   this.activeIndex = this.activeIndex === index ? null : index;
-  // }
+  
 
   filterByName() {
     this.name = this.charName;

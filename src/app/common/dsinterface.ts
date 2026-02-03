@@ -1,7 +1,7 @@
 export interface Dsinterface {
-    info: Info
+  info: Info
     data: CharacterDS[]
-}
+  }
 export interface Info {
   count: number
   totalPages: number
