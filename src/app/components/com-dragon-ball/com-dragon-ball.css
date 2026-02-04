@@ -93,7 +93,7 @@
 }
 
 /* ====== BOTONES ====== */
-button {
+/* button {
     background: linear-gradient(135deg, gold, #fff4b0);
     color: #0b3d91;
     border-radius: 10px;
@@ -112,7 +112,7 @@ button:hover {
     color: #ffffff;
     border: 2px solid gold;
     transform: scale(1.08);
-}
+} */
 
 /* ====== PAGINACIÓN ====== */
 .pagination {

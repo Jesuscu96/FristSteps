@@ -15,6 +15,9 @@
                 NextPage
             </button>
             <br />
+            <button (click)="firstPage()" [disabled]="currentPage === 1">First Page</button>
+            <button (click)="lastPage()" [disabled]="currentPage=== totalPages">Last Page</button>
+            <br />
             Go to: <input type="number" [(ngModel)]="pageToGo" /><button (click)="goToPage(pageToGo)">
                 Go to
             </button> <br>

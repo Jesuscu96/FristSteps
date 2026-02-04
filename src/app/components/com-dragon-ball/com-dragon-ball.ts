@@ -89,4 +89,12 @@ export class ComDragonBall implements OnInit{
     this.limit = this.limitPage;
     this.loadCharacters();
   }
+  firstPage() {
+    this.currentPage = 1;
+    this.loadCharacters();
+  }
+  lastPage() {
+    this.currentPage = this.totalPages;
+    this.loadCharacters();
+  }
 }
