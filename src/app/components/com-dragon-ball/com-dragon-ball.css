@@ -1,0 +1,186 @@
+/* ====== CONTENEDOR ====== */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background: linear-gradient(to bottom, #910b0b, #70030a);
+    padding: 20px;
+}
+
+/* ====== HEADER ====== */
+#header {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Georgia', serif;
+    text-shadow: 0 0 10px #9ecbff;
+}
+
+/* ====== CARD ====== */
+.card {
+    width: 100%;
+    border: 1px solid rgba(255, 215, 0, 0.6);
+    border-radius: 14px;
+    overflow: hidden;
+    background: linear-gradient(
+        135deg,
+        rgba(180, 30, 30, 0.85),
+        rgba(90, 10, 19, 0.95)
+    );
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
+}
+
+/* ====== CARD HEADER ====== */
+.card-header {
+    background: linear-gradient(90deg, #70030a, #910b0b);
+    border-radius: 14px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid gold;
+}
+
+.card-header > h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #ffffff;
+    text-shadow: 0 0 8px gold;
+}
+
+/* ====== IMAGEN ====== */
+.card > img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ====== BODY ====== */
+.card-body {
+    padding: 15px;
+    color: #f5f5f5;
+}
+
+.card-body > p {
+    margin: 6px 0;
+}
+
+/* ====== ACORDEÓN ====== */
+.accordion-content {
+    padding: 10px;
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    background: rgba(43, 1, 1, 0.95);
+    margin-top: 5px;
+    animation: fadeIn 0.3s ease-in-out;
+    color: gold;
+}
+
+.accordion-content li {
+    list-style: none;
+    margin-left: -30px;
+    font-size: smaller;
+}
+
+/* ====== BOTONES ====== */
+button {
+    background: linear-gradient(135deg, gold, #fff4b0);
+    color: #0b3d91;
+    border-radius: 10px;
+    margin: 4px;
+    border: 2px solid #0b3d91;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 12px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff1e1e, #ff9e9e);
+    color: #ffffff;
+    border: 2px solid gold;
+    transform: scale(1.08);
+}
+
+/* ====== PAGINACIÓN ====== */
+.pagination {
+    text-align: center;
+    margin: 10px;
+    color: white;
+}
+
+/* ====== INPUT ====== */
+input:focus {
+    background-color: #fff9dc;
+    outline: none;
+    box-shadow: 0 0 10px gold;
+}
+
+/* ====== SPINNER (MAGIA DISNEY) ====== */
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: gold gold transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent #1e90ff #1e90ff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  animation: rotationBack 0.5s linear infinite;
+}
+
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color: gold gold transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+
+/* ====== ANIMACIONES ====== */
+@keyframes rotation {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotationBack {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

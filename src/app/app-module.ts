@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { Comdisney } from './components/comdisney/comdisney';
 import { ComFinalSpace } from './components/com-final-space/com-final-space';
 import { ComValorant } from './components/com-valorant/com-valorant';
+import { ComDragonBall } from './components/com-dragon-ball/com-dragon-ball';
 
 
 
@@ -29,6 +30,7 @@ import { ComValorant } from './components/com-valorant/com-valorant';
     Comdisney,
     ComFinalSpace,
     ComValorant,
+    ComDragonBall,
   ],
   imports: [
     BrowserModule,

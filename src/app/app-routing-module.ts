@@ -6,6 +6,7 @@ import { Error } from './components/error/error';
 import { Comdisney } from './components/comdisney/comdisney';
 import { ComFinalSpace } from './components/com-final-space/com-final-space';
 import { ComValorant } from './components/com-valorant/com-valorant';
+import { ComDragonBall } from './components/com-dragon-ball/com-dragon-ball';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'com-valorant',
     component: ComValorant
+  },
+  {
+    path: 'com-dragon-ball',
+    component: ComDragonBall
   },
   {
     path: '',

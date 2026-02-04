@@ -1,0 +1,53 @@
+<div class="content" *ngIf="dataApi">
+    <div id="header">
+        <h1>Dragondd Ball Character List</h1>
+
+        Character Race: <input type="text" [(ngModel)]="charRace" />
+        <button (click)="filterByRace()">Filter by Race</button>
+        <br />
+        <button (click)="resetFilter()">Reset Filter</button>
+        <button (click)="orderByName()">Order by Name</button> <br>
+        All info <input type="checkbox" (click)="toggleAccordion(7)">
+        <div class="pagination">
+            <button (click)="prevPage()" [disabled]="currentPage === 1">PrevPage</button>
+            <span>Page: {{currentPage}} / {{totalPages}}</span>
+            <button (click)="nextPage()" [disabled]="currentPage=== totalPages">
+                NextPage
+            </button>
+            <br />
+            Go to: <input type="number" [(ngModel)]="pageToGo" /><button (click)="goToPage(pageToGo)">
+                Go to
+            </button> <br>
+            <select name="limitPage" [(ngModel)]="limitPage"> 
+                <option value=5>5</option>
+                <option value=10>10</option>
+                <option value=20>20</option>
+            </select>
+            <button (click)="toPageLimit(limitPage)"> Limit Page</button>
+        </div>
+
+    </div>
+    <!-- <p>Name of the first charater: {{dataApi.results[0].name}}.</p> -->
+    <div class="card" *ngFor="let char of characters; index as i">
+        <div class="card-header">
+            <h3>{{char.name}}.</h3>
+        </div>
+        <img [src]="char.image" [title]="char.name" />
+        <p><b>Race:</b>{{char.race}}</p>
+        <p><b>KI:</b>{{char.ki}}</p>
+        <p><b>Max Ki:</b>{{char.maxKi}}</p>
+        <p><b>Gender:</b>{{char.gender}}</p>
+        <p><b>Affiliation:</b>{{char.affiliation}}</p>
+        <!-- <button (click)="toggleAccordion(i)">All info</button> -->
+        <div *ngIf="activeIndex === 7 " class="accordion-content">
+            <h5>Description:</h5>
+            <p>{{char.description}}</p>
+        </div>
+        <br />
+    </div>
+
+    <!-- <ng-template #elseBlock>
+        <div class="content">
+            <span class="loader"></span>
+        </div>
+    </ng-template> -->

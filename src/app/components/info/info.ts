@@ -22,7 +22,7 @@ export class Info implements OnInit{
     this.loadCharacters();
   }
   private loadCharacters() {
-    this.rmservice.getCharacters(this.currentPage).subscribe({
+    this.rmservice.getCharacters(this.currentPage).subscribe({ //si no hay paginacion fuera this.currentPage
       next: value => {
         this.dataApi = value;
         this.characters = this.dataApi.results;

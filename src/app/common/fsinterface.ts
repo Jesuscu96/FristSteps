@@ -1,4 +1,4 @@
-
+//En caso de root y root 2 no cargamos el root1 y ponemos en service root2[] en array
 //export type Root = CharactersFS[]
 
 export interface CharactersFS {
