@@ -63,24 +63,24 @@
       </ul>
     </div>
     <button (click)="toggleAccordion(i)" *ngIf="activeIndex === i" class="accordion-content">Close</button>
-    
+
+  </div>
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">PrevPage</button>
+    <span>Page: {{currentPage}} / {{totalPages}}</span>
+    <button (click)="nextPage()" [disabled]="currentPage=== totalPages">
+      NextPage
+    </button>
+    <br />
+    Go to: <input type="number" [(ngModel)]="pageToGo" /><button (click)="goToPage(pageToGo)">
+      Go to
+    </button>
   </div>
 </div>
-<div class="pagination">
-  <button (click)="prevPage()" [disabled]="currentPage === 1">PrevPage</button>
-  <span>Page: {{currentPage}} / {{totalPages}}</span>
-  <button (click)="nextPage()" [disabled]="currentPage=== totalPages">
-    NextPage
-  </button>
-  <br />
-  Go to: <input type="number" [(ngModel)]="pageToGo" /><button (click)="goToPage(pageToGo)">
-    Go to
-  </button>
-</div>
+
 <ng-template #elseBlock>
-    <div class="content">
+  <div class="content">
 
-        <span class="loader"></span>
-    </div>
+    <span class="loader"></span>
+  </div>
 </ng-template>
-

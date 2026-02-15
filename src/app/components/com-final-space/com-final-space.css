@@ -183,6 +183,30 @@ input:focus {
   box-sizing: border-box;
   animation: animloader 1s linear infinite alternate;
 }
+
+/* ====== BOTÓN DESHABILITADO ====== */
+button:disabled,
+button[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  filter: grayscale(80%);
+  transform: none;
+  box-shadow: none;
+  background: linear-gradient(135deg, #2b2f77, #141636);
+  color: #a7c7ff;
+}
+
+
+button:disabled:hover,
+button[disabled]:hover {
+  background: linear-gradient(135deg, #2b2f77, #141636);
+  color: #a7c7ff;
+  transform: none;
+  box-shadow: none;
+}
+
+
+
 /*  SPINER  */
 @keyframes animloaderBack {
   0%, 30%, 70% {

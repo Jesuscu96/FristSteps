@@ -87,6 +87,8 @@ export class ComDragonBall implements OnInit{
   }
   toPageLimit(page: number) {
     this.limit = this.limitPage;
+    console.log(typeof this.limitPage);
+    
     this.loadCharacters();
   }
   firstPage() {
